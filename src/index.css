@@ -1,13 +1,136 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css');
+
+#root {
+  height: 100%;
+}
+
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #87b5b5;
+  line-height: 1.4;
+  font-size: 1.6rem;
+  height: 100%;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.editor-window {
+  width: 30vw;
+  margin: .5rem;
+  box-shadow: 0 0 15px black;
+  border: .1rem solid black;
+}
+
+.editor-window-minimized{
+  display: none;
+}
+
+.preview-window {
+  background-color: hsl(180, 24%, 80%);
+  width: 40vw;
+  margin: .5rem;
+  box-shadow: 0 0 15px black;
+  border: .1rem solid black;
+  margin-top: 2rem;
+}
+
+.preview-window-minimized {
+  display: none;
+}
+
+#preview {
+  padding: 2rem;
+}
+
+textarea {
+  width: 99%;
+  resize: vertical;
+  height: 18rem;
+  background-color: hsl(180, 24%, 80%);
+  outline: none;
+  margin-bottom: -4px;
+}
+
+.textarea-maximized {
+  width: 99%;
+  resize: vertical;
+  height: 100vh;
+  background-color: hsl(180, 24%, 80%);
+  outline: none;
+  margin-bottom: -4px;
+}
+
+.tool-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #65b6b6;
+  height: 3rem;
+  color: black;
+  font-size: 1.6rem;
+  font-family: 'Russo One', sans-serif;
+  border: 1px solid black;
+}
+
+.tool-box i {
+  margin: 0 1rem;
+}
+
+#headerOne{
+  border-bottom: 2px solid black;
+}
+
+#headerTwo{
+  border-bottom: 1px solid black;
+}
+
+pre {
+  background: white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background: white;
+  font-weight: 550;
+}
+
+blockquote {
+  display: block;
+  border-left: 3px solid grey;
+  padding-left: .5rem;
+  color: #2c4b4b;
+  font-size: 1.6rem;
+}
+
+table, th, td{
+  border: .2rem solid black;  
+  border-collapse: collapse;
+  padding: .2rem .8rem;
+  text-align: left;
+}
+
+#expander:hover {
+  color: #83e9e9;
+  cursor: pointer;
 }
